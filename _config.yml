@@ -1,18 +1,18 @@
 # Site settings
-title: Jekyll-Uno
-description: 'Jekyll-Uno - a minimal, responsive theme for Jekyll'
-url: 'http://joshgerdes.com/jekyll-uno'
-baseurl: '/jekyll-uno'
+title: Kadir Belke
+description: 'Kadir Belke'
+url: 'http://kadirbelke.tk'
+baseurl: '/'
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 
 author:
-  name: 'Josh Gerdes'
-  email: josh@joshgerdes.com
-  twitter_username: joshgerdes
-  facebook_username: joshgerdes
-  github_username:  joshgerdes
-  linkedin_username:  joshgerdes
+  name: 'Abdulkadir BELKE'
+  email: belkekadir@gmail.com
+  twitter_username: kadirbelke
+  facebook_username: ''
+  github_username:  kadirbelke
+  linkedin_username:  kadirbelke
 
 defaults:
   -
@@ -25,7 +25,7 @@ defaults:
 # Build settings
 destination: _site
 paginate: 10
-permalink: /:year/:title/
+permalink: /:title/
 markdown: kramdown
 highlighter: rouge
 
