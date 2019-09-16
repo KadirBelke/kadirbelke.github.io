@@ -5,7 +5,7 @@ categories: [GitHub]
 tags: [GitHub]
 ---
 
-###GitHub Pages ile Blog Oluşturma
+### GitHub Pages ile Blog Oluşturma
 
 GitHub Pages ile ücretsiz blog oluşturulabilir. Şimdi bunun nasıl yapıldığına beraber bakalım. 
 
