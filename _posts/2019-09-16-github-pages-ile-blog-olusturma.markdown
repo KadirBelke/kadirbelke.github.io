@@ -2,7 +2,7 @@
 title:  "Github Pages ile Blog Oluşturma"
 date:   2018-09-16 10:05:00
 categories: [GitHub]
-tags: [GitHub] [Blog]
+tags: [GitHub]
 ---
 
 ###GitHub Pages ile Blog Olışturma
@@ -22,10 +22,10 @@ Bu işlemleri yaptıktan sonra isterseniz sitemizin alan adını değiştirebili
 Ekledikten sonra  GitHub'ın bize vermiş olduğu 4 Ip adresinden birini Cloudflare DNS sekmesindeki alana ekliyoruz. 
 
 ##### Ip Adresleri :
-	-	185.199.108.153
-	-	185.199.108.153 
-	-	185.199.108.153
-	-	185.199.108.153
+	* 185.199.108.153
+	* 185.199.108.153 
+	* 185.199.108.153
+	* 185.199.108.153
 
 ![](/images/blog-olusturma-3.png)
 
