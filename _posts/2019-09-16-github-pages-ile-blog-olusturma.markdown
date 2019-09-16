@@ -5,8 +5,6 @@ categories: [GitHub]
 tags: [GitHub]
 ---
 
-### GitHub Pages ile Blog Oluşturma
-
 GitHub Pages ile ücretsiz blog oluşturulabilir. Şimdi bunun nasıl yapıldığına beraber bakalım. 
 
 İlk önce GitHub'dan yeni bir depo(repository) oluştruyoruz. Oluşturduğumuz bu deponun adını kullanıcıadı.github.io şeklinde adlandırıyoruz. 
