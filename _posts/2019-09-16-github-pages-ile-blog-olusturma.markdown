@@ -27,7 +27,7 @@ Ekledikten sonra  GitHub'ın bize vermiş olduğu 4 Ip adresinden birini Cloudfl
 
 ![](/images/blog-olusturma-3.png)
 
-Ip adresi eklendikten sonra Cloudflare bize iki adet nameserver verecektir. Bu nameseverleri Dot.TK'nın  yönlendimiş olduğu [freenom.com](http://freenom.com9 sitesine ekliyoruz. 
+Ip adresi eklendikten sonra Cloudflare bize iki adet nameserver verecektir. Bu nameseverleri Dot.TK'nın  yönlendimiş olduğu [freenom.com](http://freenom.com) sitesine ekliyoruz. 
 
 ![](/images/blog-olusturma-4.png)
 
