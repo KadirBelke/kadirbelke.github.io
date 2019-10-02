@@ -1,5 +1,5 @@
 ---
-title:  "Telegram Botu Oluşturma"
+title:  "Ruby ile Telegram Botu Oluşturma"
 date:   2018-10-01 10:05:00
 categories: [Telagram]
 tags: [Telagram]
@@ -55,7 +55,7 @@ require 'telegram/bot'
 require 'openssl'
 
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
-token = '742177877:AAFA4PhMCiNegipdRUnQhzAgRD2UvLmAUCI'
+token = EVN["TELEGRAM_BOT_TOKEN"]
 
 Telegram::Bot::Client.run(token) do |bot|
   bot.listen do |
