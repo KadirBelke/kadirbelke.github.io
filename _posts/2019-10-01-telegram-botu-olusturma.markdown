@@ -6,11 +6,23 @@ tags: [Telagram]
 ---
 
 Birden fazla Telegram botu bulunmaktadır. Biz bunun içinden Bot Father'ı kullanacağız. Bot Father ile Telegram botu nasıl oluşturulur gelin beraber bakalım.
- İlk önce Telegram'ımız da arama kısmına **BotFather** yazıyoruz. Karşımıza çıkan mavi tikli hesaba tıklıyoruz. Sohbet kısmına  **/start** yazıyoruz. BotFather  bize cevap olarak bazı komutlar yolluyor.
+İlk önce Telegram'ımız da arama kısmına **BotFather** yazıyoruz. Karşımıza çıkan mavi tikli hesaba tıklıyoruz. Sohbet kısmına
+
+```
+ /start
+```
+
+ yazıyoruz. BotFather  bize cevap olarak bazı komutlar yolluyor.
 
 ![](/images/telegram-botu-olusturma/tbo-1.png)
 
-Biz karşımıza gelen bu komutlardan **/newbot** komutunu kullanıyoruz. BotFather bizden oluşturmak istediğimiz botun sırası ile adı ve kullanıcı adını isteyecektir. Misal olarak adını *Mezarcı*, kullanıcı adını ise *mezarci_bot* koyalım. Bize cevap olarak bota erişebileceğimiz bir token verecektir.
+Biz karşımıza gelen bu komutlardan
+
+```
+/newbot
+```
+
+komutunu kullanıyoruz. BotFather bizden oluşturmak istediğimiz botun sırası ile adı ve kullanıcı adını isteyecektir. Misal olarak adını *Mezarcı*, kullanıcı adını ise *mezarci_bot* koyalım. Bize cevap olarak bota erişebileceğimiz bir token verecektir.
 
 ![](/images/telegram-botu-olusturma/tbo-2.png)
 
@@ -18,15 +30,21 @@ Bu token ile bota erişim sağlayıp, değişlikler yapabiliriz.
 
 Bu işlemleri hallettikten sonra Ruby ile oluşturduğumuz *Bot'u* kontrol edeceğiz. Sistemimize veya projemize [telegram-bot-ruby](https://github.com/atipugin/telegram-bot-ruby) kütüphanesini yüklüyoruz.  Projemize eklemek için *Gemfile* dosyasına :
 
->gem 'telegram-bot-ruby'
+```
+gem 'telegram-bot-ruby'
+```
 
 satırını ekliyoruz. Ardından terminal ekranında
 
->bundle
+```
+bundle
+```
 
 komutunu çalıştırıyoruz. Sitemimize yüklemek için ise terminal ekranına
 
->gem install telegram-bot-ruby
+```
+gem install telegram-bot-ruby
+```
 
 komutunu çalıştırıyoruz.
 
@@ -40,7 +58,8 @@ OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 token = '742177877:AAFA4PhMCiNegipdRUnQhzAgRD2UvLmAUCI'
 
 Telegram::Bot::Client.run(token) do |bot|
-  bot.listen do |message|
+  bot.listen do |
+    message|
     case message.text
     when '/start'
       bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}")
@@ -53,10 +72,14 @@ end
 ```
 Oluşturduğumuz botun bize vermiş olduğu *token* değerini koddaki *token* değişkenine tanımlıyoruz. Terminal ekranında
 
-> ruby dosya_adı.rb
+```
+ruby dosya_adı.rb
+```
 
 komutunu çalıştırıyoruz. *dosya_adı* kısmına *Ruby* kodlarının bulunduğu dosyanın adını veriyoruz. Bu işlemi yaptıktan sonra Telegram'da arama kısmına oluşturduğumuz botun adını yazıyoruz. Sonra ise
 
->/start
+```
+/start
+```
 
-komutunu oluşturduğumuz bota mesaj olarak gönderelim. Botumuzun bize cevap verdiğini göreceğiz. Oluşturduğumuz kodun içinde değişiklikler yaparak botumuzu istediğimiz gibi kullanabiliriz. 
+komutunu oluşturduğumuz bota mesaj olarak gönderelim. Botumuzun bize cevap verdiğini göreceğiz. Oluşturduğumuz kodun içinde değişiklikler yaparak botumuzu istediğimiz gibi kullanabiliriz.
