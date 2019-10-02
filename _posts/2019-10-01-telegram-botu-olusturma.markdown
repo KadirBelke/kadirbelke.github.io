@@ -30,19 +30,19 @@ Bu token ile bota erişim sağlayıp, değişlikler yapabiliriz.
 
 Bu işlemleri hallettikten sonra Ruby ile oluşturduğumuz *Bot'u* kontrol edeceğiz. Sistemimize veya projemize [telegram-bot-ruby](https://github.com/atipugin/telegram-bot-ruby) kütüphanesini yüklüyoruz.  Projemize eklemek için *Gemfile* dosyasına :
 
-```
+```console
 gem 'telegram-bot-ruby'
 ```
 
 satırını ekliyoruz. Ardından terminal ekranında
 
-```
+```console
 bundle
 ```
 
 komutunu çalıştırıyoruz. Sitemimize yüklemek için ise terminal ekranına
 
-```
+```console
 gem install telegram-bot-ruby
 ```
 
@@ -72,13 +72,13 @@ end
 ```
 Oluşturduğumuz botun bize vermiş olduğu *token* değerini koddaki *token* değişkenine tanımlıyoruz. Terminal ekranında
 
-```
+```console
 ruby dosya_adı.rb
 ```
 
 komutunu çalıştırıyoruz. *dosya_adı* kısmına *Ruby* kodlarının bulunduğu dosyanın adını veriyoruz. Bu işlemi yaptıktan sonra Telegram'da arama kısmına oluşturduğumuz botun adını yazıyoruz. Sonra ise
 
-```
+```console
 /start
 ```
 
