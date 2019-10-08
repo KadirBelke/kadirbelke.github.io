@@ -1,6 +1,6 @@
 ---
 title:  "Github Pages ile Blog Oluşturma"
-date:   2018-09-16 10:05:00
+date:   2019-09-16 10:05:00
 categories: [GitHub]
 tags: [GitHub]
 ---

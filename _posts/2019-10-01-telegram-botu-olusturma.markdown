@@ -1,6 +1,6 @@
 ---
 title:  "Ruby ile Telegram Botu Oluşturma"
-date:   2018-10-01 10:05:00
+date:   2019-10-01 10:05:00
 categories: [Telagram]
 tags: [Telagram]
 ---
