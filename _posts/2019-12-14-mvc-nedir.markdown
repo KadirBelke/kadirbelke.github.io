@@ -1,0 +1,27 @@
+---
+title:  "MVC Nedir?"
+date:   2019-12-14 19:05:00
+categories: [MVC]
+tags: [MVC]
+---
+ **MVC(MODEL-VIEW-CONTROLLER)**
+ MVC, yazılım mühendisliğinde kullanınlan bir tasarım desnidir. Kullanıcıya yüklü miktarda verinin sunulduğu karmaşık uygulamalarda veri ve gösterimin soyutlanması esasına dayanır. Böylece veriler(model) ve kullanıcı arayüzü(view), birbirini etkilemeden controller adı verilen ara bileşenle veri gösterimi ve kullanıcı etkileşiminden veri erişimi ve iş mantığını çıkarma suretiyle çözümlenmektedir. Çoğunlukla web uygulamalarında kullanılmaktadır.
+
+
+![](/images/mvc-nedir/01.png)
+
+ **Model**
+
+ Uygulamada kullanılan verileri temsil eder ve verilerin işlenme mantığının saklandığı kısımdır. Verilerin validasyonu burada yapılır. Verilerin,  veritabanı kaydedilmesi ve kayıtlı yerden alınması işlemleri yine burada gerçekleşir.
+
+**View**
+
+Uygulanmanın arayüz tasarımı burada tasarlanır, projenin html dosyaları burada bulunur. Projenin yazıldığı dile göre uzantılarda farklılıklar olabilir. Mesale ruby on rails için erb uzantısı kullanılmaktadır. Controller'da oluştulan fonksiyonlara göre dosyalar oluşturulur.
+
+**Controller**
+
+Controller, MVC’de projenin iç süreçlerini kontrol eden bölümdür. Bu bölümde View ile Model arasındaki bağlantı kurulur. Kullanıcılardan gelen istekler (request) Controller’larda değerlendirilir, isteğin detayına göre hangi işlemlerin yapılacağı ve kullanıcıya hangi View’ın döneceği (response) belirtilir.
+
+**MVC'nin Çalışma Mantığı**
+
+Uygulamada her bir istek(request) yapıldığında, routing  dosyasında kotrol edilip controller dosyasına yönlendirilir. Controller dosyasında gerekli işlemler yapılır. Bu işlemlerin ardından fonksiyonda yönlendilecek bir yol yok ise o fonksiyona ait vire çalışır ve kullanıcının isteğine bir cevap(response) döner.
