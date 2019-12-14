@@ -24,4 +24,5 @@ Controller, MVC’de projenin iç süreçlerini kontrol eden bölümdür. Bu bö
 
 **MVC'nin Çalışma Mantığı**
 
-Uygulamada her bir istek(request) yapıldığında, routing  dosyasında kotrol edilip controller dosyasına yönlendirilir. Controller dosyasında gerekli işlemler yapılır. Bu işlemlerin ardından fonksiyonda yönlendilecek bir yol yok ise o fonksiyona ait vire çalışır ve kullanıcının isteğine bir cevap(response) döner.
+Uygulamada her bir istek(request) yapıldığında, routing  dosyasında kotrol edilip controller dosyasına yönlendirilir. Controller dosyasında gerekli işlemler yapılır. Bu işlemlerin ardından fonksiyonda yönlendilecek bir yol yok ise o fonksiyona ait view çalışır ve kullanıcının isteğine bir cevap(response) döner. 
+Şimdi bu durumu örneklendirecek olursak eğer siz Twitter da bir kullanıcının profilini görmek için istek(request) göndermeniz durumunda, router dosyasında bu istek kontrol edilir. Kontrol edildikten sonra controller dosyasında profile ait fonksiyon çalışır. Fonksiyonda gerekli veritabanı işleri yapılır ve ardından sizi o fonksiyona ait view'i yani kullanıcının profilini cevap(response) olarak geri döndürür.  
