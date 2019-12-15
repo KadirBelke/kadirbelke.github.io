@@ -1,0 +1,16 @@
+---
+title:  "API Nedir?"
+date:   2019-12-15 01:15:00
+categories: [API]
+tags: [API]
+---
+
+![](/images/apı-nedir/01.png)
+
+API'nin açılımı **Application Pragramming Interface**'dir. Türkçe karşılığı ise **Uygulama Programlama Arayüzü**'dür. API, bir uygulamanın fonksiyonlarına uzaktan erişim sağlayıp bu fonksiyonların kullanılmasını sağlayan arayüzdür. Bir sunucuda bulunan uygulamanın farklı platformlara ulaşmasını ve cevap(response) dönmesini sağlar. Web API’lerinin tamamı REST(REpresentational State Transfer) mimarisi üzerinde dizayn edilir. Bundan dolayı platform bağımsız çalışır. Bu mimari GET, POST, PUT, DELETE metotlarının hepsini desteklemektedir. Web API çıktıları talebe göre JSON, XML gibi çeşitli çıktıları olabilir.
+
+API kullanımın asıl amacı bir uygulamanın bütün veya bazı metotlarını diğer uygulamalara kullanıma açarak uzaktan gelecek veri ve bilgi taleplerini kolayca ve hızlıca karşılamaktadır. Böylelikle tek bir uygulamada gerçekleşen işlemlerden izin verilen uzak kullanıcılar belirli parametreler sayesinde faydalanabileceklerdir. API genel olarak gerçek zamanlı veriyi tek tek işlemeye yarar. Sunucunun API üzerinden gönderdiği parametre içeren veya içermeyen girdiyi sunucu işler ve geriye bir sonuç kümesi veya sadece başarı bildirimi döner. Verinin sadece belli bir kısmında yapılacak güncellemeler bir parametre gerektirir. API ise bu işlemlerin hem hızlı hemde pratik olmasını sağlar.
+
+Örneğin, Geliştirdiğimiz bir projede Twitter API’yi çağırarak, Twitter’ın bize izin verdiği (tweet atma, hesap takip etme, vb.) işlemleri, API yetkimiz olan Twitter hesaplarında, kendi uygulamamız üzerinden de gerçekleştirebiliriz.API ile erişim yetkimizin olduğu 100 hesabın aynı anda “Merhaba Dünya! Nasılsın iyi misin? İyisindir inşallah…“ tweet’ini atmasını sağlayabiliriz!
+
+API'nin kısaca kullanım şekli ise, sunucu üzerinde bulunan bir programın API ile fonksiyonlarına izin verilir. Bu fonksiyonları kullanabilmek için bir parola gereklidir. Sunucu tarafındaki program bu parolayı kullanıcıya sağlar. Daha sonra kullanıcı bu parola ile sunucu üzerinde bulunan programın izin verilen fonksiyonlarına ulaşır ve isteklerine(request) göre cevap(response) alır.
