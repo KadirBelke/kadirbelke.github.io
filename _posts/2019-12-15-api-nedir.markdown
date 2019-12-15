@@ -4,10 +4,9 @@ date:   2019-12-15 01:15:00
 categories: [API]
 tags: [API]
 ---
+API'nin açılımı **Application Pragramming Interface**'dir. Türkçe karşılığı ise **Uygulama Programlama Arayüzü**'dür. API, bir uygulamanın fonksiyonlarına uzaktan erişim sağlayıp bu fonksiyonların kullanılmasını sağlayan arayüzdür. Bir sunucuda bulunan uygulamanın farklı platformlara ulaşmasını ve cevap(response) dönmesini sağlar. Web API’lerinin belli bir kısmı REST(REpresentational State Transfer) mimarisi üzerinde dizayn edilir. Bundan dolayı platform bağımsız çalışır. Bu mimari GET, POST, PUT, DELETE metotlarının hepsini desteklemektedir. Web API çıktıları talebe göre JSON, XML gibi çeşitli çıktıları olabilir.
 
 ![](/images/apı-nedir/01.png)
-
-API'nin açılımı **Application Pragramming Interface**'dir. Türkçe karşılığı ise **Uygulama Programlama Arayüzü**'dür. API, bir uygulamanın fonksiyonlarına uzaktan erişim sağlayıp bu fonksiyonların kullanılmasını sağlayan arayüzdür. Bir sunucuda bulunan uygulamanın farklı platformlara ulaşmasını ve cevap(response) dönmesini sağlar. Web API’lerinin belli bir kısmı REST(REpresentational State Transfer) mimarisi üzerinde dizayn edilir. Bundan dolayı platform bağımsız çalışır. Bu mimari GET, POST, PUT, DELETE metotlarının hepsini desteklemektedir. Web API çıktıları talebe göre JSON, XML gibi çeşitli çıktıları olabilir.
 
 API kullanımın asıl amacı bir uygulamanın bütün veya bazı metotlarını diğer uygulamalara kullanıma açarak uzaktan gelecek veri ve bilgi taleplerini kolayca ve hızlıca karşılamaktadır. Böylelikle tek bir uygulamada gerçekleşen işlemlerden izin verilen uzak kullanıcılar belirli parametreler sayesinde faydalanabileceklerdir. API genel olarak gerçek zamanlı veriyi tek tek işlemeye yarar. Sunucunun API üzerinden gönderdiği parametre içeren veya içermeyen girdiyi sunucu işler ve geriye bir sonuç kümesi veya sadece başarı bildirimi döner. Verinin sadece belli bir kısmında yapılacak güncellemeler bir parametre gerektirir. API ise bu işlemlerin hem hızlı hemde pratik olmasını sağlar.
 
