@@ -21,10 +21,10 @@ Ekledikten sonra  GitHub'ın bize vermiş olduğu 4 Ip adresinden birini Cloudfl
 
 ##### Ip Adresleri :
 	* 185.199.108.153
-	* 185.199.108.153
-	* 185.199.108.153
-	* 185.199.108.153
-
+	* 185.199.109.153
+	* 185.199.110.153
+	* 185.199.111.153
+	
 ![](/images/blog-olusturma/blog-olusturma-3.png)
 
 Ip adresi eklendikten sonra Cloudflare bize iki adet nameserver verecektir. Bu nameseverleri Dot.TK'nın  yönlendimiş olduğu [freenom.com](http://freenom.com) sitesine ekliyoruz.
