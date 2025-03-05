@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>{{ site.title }} - Resume</title>
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="yandex-verification" content="56a72f4e0614124f" />
+  
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:image" content="{{ site.baseurl }}/images/favicons/favicon-194x194.png" />
+  
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="{{ site.baseurl }}/images/favicons/manifest.json">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-TileImage" content="{{ site.baseurl }}/images/favicons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/resume.css?{{site.time | date: '%s%N'}}"> 
+    <link rel="canonical" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endif %}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml">
+  <body>
+
+    <div class="content-wrapper">
+        <div class="main-container">
+            
+            <div class="cv-container">
+                <div class="top-bar"> 
+                    <div class="language-switcher">
+                        <a href="/resume/">Türkçe</a> | <a href="/resume-en/">English</a>
+                    </div>
+                    <div class="language-switcher">
+                        <a href="/" >
+                          {% if page.permalink contains '/resume-en/' %}
+                            Return to Home
+                          {% else %}
+                            Ana Sayfaya Dön
+                          {% endif %}
+                        </a>
+                    </div>
+                </div>
+                {{ content }}
+                <div class="download-button">
+                  <button onclick="downloadPDF()">
+                    {% if page.permalink contains '/cv-en/' %}
+                      Download as PDF
+                    {% else %}
+                      PDF Olarak İndir
+                    {% endif %}
+                  </button>
+              </div>
+            </div>
+        </div>
+
+      {% include footer.html %}
+    </div>
+
+   
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.js"></script>
+    <script>
+        function downloadPDF() {
+            const h1 = document.querySelector('h1').innerText;
+            const h2 = document.querySelector('h2').innerText;
+            const sections = document.querySelectorAll('.cv-section');
+
+            const content = [
+                { text: h1, style: 'header', alignment: 'center' },
+                { text: h2, style: 'subheader', alignment: 'center' }
+            ];
+
+            sections.forEach(section => {
+                const title = section.querySelector('h3').innerText;
+                content.push({ text: title, style: 'sectionHeader' });
+                content.push({
+                    canvas: [
+                        {
+                            type: 'line',
+                            x1: 0, y1: 0,
+                            x2: 515, y2: 0,
+                            lineWidth: 2
+                        }
+                    ],
+                    margin: [0, 0, 0, 5] 
+                });
+
+                const items = Array.from(section.querySelectorAll('li')).map(li => {
+                    const strongText = li.querySelector('strong') ? li.querySelector('strong').innerText : '';
+                    const restText = li.innerText.replace(strongText, '');
+                    return { text: [{ text: strongText, bold: true }, restText] };
+                });
+
+                if (items.length > 0) {
+                    content.push({ ul: items, margin: [10, 5, 0, 10] });
+                } else {
+                    const paragraph = section.querySelector('p');
+                    if (paragraph) {
+                        content.push({ text: paragraph.innerText, margin: [10, 5, 0, 10] });
+                    }
+                }
+            });
+
+            const docDefinition = {
+                content: content,
+                styles: {
+                    header: {
+                        fontSize: 28,
+                        bold: true,
+                        margin: [0, 0, 0, 0]
+                    },
+                    subheader: {
+                        fontSize: 22,
+                        bold: true,
+                        margin: [0, 3, 0, 10]
+                    },
+                    sectionHeader: {
+                        fontSize: 14,
+                        bold: true,
+                        margin: [0, 10, 0, 5]
+                    }
+                }
+            };
+
+            pdfMake.createPdf(docDefinition).download('AbdulkadirBelkeResume.pdf');
+        }
+    </script> 
+  </body>
+</html>
+
+
